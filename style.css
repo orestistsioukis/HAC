@@ -3,9 +3,12 @@
   padding: 0;
   text-decoration: none;
 }
-
+html,body{
+  height: 100%;
+}
 main {
   padding-top: 100px;
+  min-height: 100%;
 }
 
 header {
@@ -536,6 +539,9 @@ span:hover .sp-visible {
 }
 /******FOOTER********/
 footer {
+  position: relative;
+  height: fit-content;
+  clear: both;
   width: calc(100% - 80px);
   padding: 40px 40px;
   margin-top: 20px;
@@ -616,7 +622,7 @@ footer ul li a {
     line-height: 40px;
   }
   .footer-sm {
-    width: 50%;
+    width: fit-content;
     float: right;
   }
   .footer-sm img:hover{
@@ -645,7 +651,6 @@ footer ul li a {
 /*GALLERY*/
 .main-gallery {
   width: 95%;
-  height: fit-content;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 }
