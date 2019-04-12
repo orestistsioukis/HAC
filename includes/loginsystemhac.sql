@@ -1,6 +1,6 @@
 -- FORMAT of `gallery`
 CREATE TABLE `gallery` (
-  `idGallery` int(11) NOT NULL,
+  `idGallery` int(11) NOT NULL AUTO_INCREMENT,
   `titleGallery` longtext NOT NULL,
   `descGallery` longtext NOT NULL,
   `imgFullNameGallery` longtext NOT NULL,
@@ -18,7 +18,7 @@ INSERT INTO `gallery` (`idGallery`, `titleGallery`, `descGallery`, `imgFullNameG
 (8, 'North root', 'North way to summit', 'north-side.5c9c126e7a0714.31523874.jpg', '8');
 -- FORMAT of `users`
 CREATE TABLE `users` (
-  `idUsers` int(11) NOT NULL,
+  `idUsers` int(11) NOT NULL AUTO_INCREMENT,
   `uidUsers` tinytext NOT NULL,
   `emailUsers` tinytext NOT NULL,
   `pwdUsers` longtext NOT NULL
