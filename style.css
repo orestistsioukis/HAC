@@ -649,7 +649,8 @@ footer ul li a {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
+  align-content: center;
+  margin-bottom: 20px;
 }
 .gallery-container a {
 	width: 270px;
@@ -681,60 +682,34 @@ footer ul li a {
 .gallery-upload {
   width: 100%;
   max-width: fit-content;
-  height: fit-content;
+  background-color: #fff;
   overflow: hidden;
-  background-color: #cfcfcf;
-  border: 1px solid #fff;
-  border-radius: 4px; 
-	position: relative;
-	top: 20px;
-  margin-bottom: 40px;
-  margin-top: 20px;
+  border: 1px solid #111;
 }
-.gallery-upload h2,
+.gallery-upload h1,
+input,
 label,
 button {
   font-family: arial;
-  font-weight: 600;
+  font-weight: 700;
   color: #3e3e3e;
 }
-.gallery-upload h2 {
+.gallery-upload h1 {
   margin-bottom: 10px;
-  font-size: 22px;
-  text-align: left;
 }
 .gallery-upload label {
   font-weight: 500;
 }
-.gallery-upload .error {
-  display: inline;
-  font-family: arial;
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-  color: #ff0000;
-}
-.gallery-upload .success {
-  display: inline;
-  font-family: arial;
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-  color: #00ff00;
-}
-.gallery-upload input {
-	width: 100%;
-  padding: 8px 0px;
-  margin: 10px 0px;
+.gallery-upload input[type=text],
+.gallery-upload input[type=file] {
+  width: calc(100% - 44px);
+  padding: 16px 20px;
+  margin: 0px 2px 10px 2px;
   border: none;
-  background-color: #fff;
-  text-align: center;
+  background: #f1f1f1;
 }
-.gallery-upload input[type=file]{
-  cursor: pointer;
-} 
-.gallery-upload  button {
-	background-color: #6970b4;
+.gallery-upload button {
+  background-color: #508bce;
   color: #fff;
   opacity: 0.8;
   padding: 16px 20px;
@@ -743,23 +718,34 @@ button {
   width: 100%;
   margin-bottom: 10px;
 }
-.gallery-upload  button:hover{
+button:hover
+ {
   opacity: 1;
 }
-@media only screen and (min-width: 425px){
-  .gallery-upload {
-    width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    height: fit-content;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    position: relative;
-    top: 20px;
-    margin-bottom: 40px;
-  }
+.gallery-upload .error{
+  margin: 10px 2px 10px 2px;
+  border: none;
+  color: #ff0000;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.gallery-upload .success{
+  margin: 10px 2px 10px 2px;
+  border: none;
+  color: #4CAF50;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
 }
 @media only screen and (min-width: 768px){
+  .gallery-upload {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
   .main-gallery {
     width: 100%;
     max-width: 1200px;
@@ -767,5 +753,98 @@ button {
   }
   .gallery-links {
     padding-top: 0px; 
+  }
+}
+/****CONTACT.PHP****/
+/*CONTACT*/
+.main-contact {
+  width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.contact-section {
+  padding-top: 54px; 
+}
+.contact-section h2 {
+  font-family: Catamaran;
+	font-size: 28px;
+	font-weight: 500;
+	color: #111;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*FORM*/
+.contact-form {
+  width: 100%;
+  max-width: fit-content;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #111;
+  z-index: 1000;
+}
+.contact-form h1,
+label,
+textarea,
+button {
+  font-family: arial;
+  font-weight: 700;
+  color: #3e3e3e;
+}
+.contact-form h1 {
+  margin-bottom: 10px;
+}
+.contact-form label {
+  font-weight: 500;
+}
+.contact-form input[type=text],
+.contact-form textarea {
+  width: calc(100% - 44px);
+  padding: 16px 20px;
+  margin: 0px 2px 10px 2px;
+  border: none;
+  background: #f1f1f1;
+}
+.contact-form textarea {
+  height: 80px;
+  max-height: 80px;
+}
+.contact-form button {
+  background-color: #508bce;
+  color: #fff;
+  opacity: 0.8;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+button:hover
+ {
+  opacity: 1;
+}
+.contact-form .error{
+  margin: 10px 2px 10px 2px;
+  border: none;
+  color: #ff0000;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.contact-form .success{
+  margin: 10px 2px 10px 2px;
+  border: none;
+  color: #4CAF50;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px){
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
