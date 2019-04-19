@@ -54,9 +54,13 @@ require "header.php";
 					<h2>Upload</h2>
 					'.@$message.'
 					<form action="includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
+						<label for="filename">File name: </label>
 						<input type="text" name="filename" placeholder="File name...">
+						<label for="filetitle">Image title: </label>
 						<input type="text" name="filetitle" placeholder="Image title...">
+						<label for="filedesc">Image description: </label>
 						<input type="text" name="filedesc" placeholder="Image description...">
+						<label for="file">Pick a file: </label>
 						<input type="file" name="file">
 						<button type="submit" name="submit">UPLOAD</button>
 					</form>
