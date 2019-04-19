@@ -683,7 +683,7 @@ footer ul li a {
   max-width: fit-content;
   height: fit-content;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #cfcfcf;
   border: 1px solid #fff;
   border-radius: 4px; 
 	position: relative;
@@ -691,12 +691,20 @@ footer ul li a {
   margin-bottom: 40px;
   margin-top: 20px;
 }
-.gallery-upload h2 {
+.gallery-upload h2,
+label,
+button {
   font-family: arial;
   font-weight: 600;
-	color: #6970b4;
-  text-shadow: 1px 1px 1px #111;
+  color: #3e3e3e;
+}
+.gallery-upload h2 {
   margin-bottom: 10px;
+  font-size: 22px;
+  text-align: left;
+}
+.gallery-upload label {
+  font-weight: 500;
 }
 .gallery-upload .error {
   display: inline;
