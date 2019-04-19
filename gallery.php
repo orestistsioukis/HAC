@@ -51,7 +51,7 @@ require "header.php";
 				<?php
 				if (isset($_SESSION['userId'])) {
 					echo '<div class="gallery-upload">
-					<h2>Upload</h2>
+					<h1>Upload</h1>
 					'.@$message.'
 					<form action="includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
 						<label for="filename">File name: </label>
