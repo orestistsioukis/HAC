@@ -14,8 +14,20 @@ if (isset($_POST['submit'])) {
         header("Location: ../contact.php?error=invalidmail&fullname=".$name."&subject=".$subject."&message=".$message);
         exit();
     }  
-    else if (!preg_match("/^[a-zA-Z0-9]*$/", $name) || !preg_match("/^[a-zA-Z0-9]*$/", $subject) || !preg_match("/^[a-zA-Z0-9]*$/", $message)) {
+    else if (!preg_match("/^[a-zA-Z0-9]*$/", $name) && !preg_match("/^[a-zA-Z0-9]*$/", $subject) && !preg_match("/^[a-zA-Z0-9]*$/", $message)) {
         header("Location: ../contact.php?error=invalidchar&mail=".$mailFrom);
+        exit();
+    }  
+    else if (!preg_match("/^[a-zA-Z0-9]*$/", $name)) {
+        header("Location: ../contact.php?error=invalidname&mail=".$mailFrom."&subject=".$subject."&message=".$message);
+        exit();
+    }  
+    else if (!preg_match("/^[a-zA-Z0-9]*$/", $subject)) {
+        header("Location: ../contact.php?error=invalidsubject&fullname=".$name."&mail=".$mailFrom."&message=".$message);
+        exit();
+    }  
+    else if (!preg_match("/^[a-zA-Z0-9]*$/", $message)) {
+        header("Location: ../contact.php?error=invalidmessage&fullname=".$name."&mail=".$mailFrom."&subject=".$subject);
         exit();
     }  
     else {
