@@ -4,7 +4,12 @@ require "header.php";
 
 	<main class="main-contact">
 		<section class="contact-section">
-			<h2>Contact Us</h2>
+			<div class="contact-banner">
+				<div class="contact-box" >
+					<h2>Contact Us</h2>
+					<p class="contact-paragraph">If you are lost, try to contact us. Please let us know your thoughts! We will try to respond you as soon as possible.</p>
+				</div>
+			</div>
 			<form class="contact-form" action="includes/contactform.inc.php" method="POST">
 				<h1>Sent us your message</h1>
 				<?php
@@ -24,6 +29,24 @@ require "header.php";
 					elseif (@$_GET['error'] == "invalidchar") {
 						echo '<p class="error">You entered invalid characters!</p>';
 						$mailFrom = $_GET['mail'];
+					}
+					elseif (@$_GET['error'] == "invalidname") {
+						echo '<p class="error">You entered invalid name!</p>';
+						$mailFrom = $_GET['mail'];
+						$subject = $_GET['subject'];
+						$message = $_GET['message'];
+					}
+					elseif (@$_GET['error'] == "invalidsubject") {
+						echo '<p class="error">You entered invalid subject!</p>';
+						$mailFrom = $_GET['mail'];
+						$name = $_GET['fullname'];
+						$message = $_GET['message'];
+					}
+					elseif (@$_GET['error'] == "invalidmessage") {
+						echo '<p class="error">You entered invalid message!</p>';
+						$mailFrom = $_GET['mail'];
+						$name = $_GET['fullname'];
+						$subject = $_GET['subject'];
 					}
 					elseif (@$_GET['error'] == "mailnotsent") {
 						echo '<p class="error">Your message was not sent. Try again later.</p>';
