@@ -386,25 +386,42 @@ button {
   justify-content: center;
   flex-wrap: wrap;
 }
-.icon-rectangular {
+.icon-rectangular-big {
+  display: table;
   float: left;
-  margin: 10px;
-	width: 150px;
-	height: 60px;
-  background-color: #bff5c7;
+  margin: 5px;
+	width: 120px;
+	height: 120px;
+  background-color: hsl(129, 50%, 70%);
 	color: #111;
   border-radius: 4px;
   text-align: center;
 	vertical-align: 50%;
 }
-.icon-rectangular span {
+.icon-rectangular-tiny {
+  display: table;
+  float: left;
+  margin: 5px;
+	width: 120px;
+  height: 120px;
+  background-color: hsl(129, 70%, 90%);
+	color: #111;
+  border-radius: 4px;
+  text-align: center;
+	vertical-align: 50%;
+}
+.icon-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+.icon-box span {
   font-family: arial;
   text-align: center;
 	color: #fff;
   text-shadow: 1px 1px 1px #111;
   cursor: pointer;
 }
-.icon-rectangular h3 {
+.icon-box h3 {
 	font-family: arial;
 	font-size: 18px;
   text-align: center;
@@ -432,20 +449,22 @@ span:hover .sp-visible {
   .icon-container {
     width: 100%;
   }
-  .icon-rectangular {
+  .icon-rectangular-big {
     float: left;
-    width: calc(25% - 40px);
-    margin: 10px 5px;
-    border: 1px solid #111;
-    border-radius: 0;
+    width: calc(25% - 10px);
+    margin: 20px 5px;
+  }
+  .icon-rectangular-tiny {
+    float: left;
+    width: calc(25% - 10px);
+    margin: 20px 5px;
   }
 }
 /*****MAIN-TEXT******/
 .main-text {
-  width: 80%;
+  width: 100%;
   height: fit-content;
-	margin-left: 10%;
-	margin-right: 10%;
+  margin: 10px 0px;
 }
 .main-text h2 {
   font-family: Catamaran;
@@ -454,6 +473,7 @@ span:hover .sp-visible {
 	color: #111;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: 1px solid #111;
 }
 .main-text article {
   font-family: arial;
@@ -462,34 +482,41 @@ span:hover .sp-visible {
   text-align: center;
   color: #111;
   margin-bottom: 20px;
-  border-bottom: 2px solid #111;
+  padding: 20px 10px;
+  background-color: hsl(129, 70%, 95%);
 }
-.main-text p {
+.paragraph-box {
+  width: calc(100% - 20px);
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+}
+.paragraph-box p {
   font-family: arial;
   font-size: 14px;
   line-height: 20px;
   font-style: italic;
   text-align: center;
   color: #111;
-  margin-bottom: 20px;
+  padding: 10px 0px;
 }
 @media only screen and (min-width: 768px){
-  .main-text {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
   .main-text article {
+    float: left;
+    width: calc(50% - 40px);
     font-size: 20px;
     margin-bottom: 40px;
-    padding-bottom: 10px;
+    padding: 80px 10px;
   }
-  .main-text p {
-    width: calc(50% - 40px);
-    float: left;
-    font-size: 18px;
+  .paragraph-box {
+    float: right;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 40px 10px;
     margin-bottom: 40px;
-    padding: 0 10px 10px;
+  }
+  .paragraph-box p {
+    padding: 20px 10px;
   }
 }
 /***I-FRAME***/
@@ -497,7 +524,7 @@ span:hover .sp-visible {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 .video-wrapper {
   position: relative;
